@@ -1,6 +1,4 @@
 plugins {
-	id 'org.springframework.boot' version '2.4.6'
-	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'maven'
 	id 'maven-publish'
@@ -15,8 +13,8 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter")
-	implementation("org.springframework.boot:spring-boot-starter-data-redis")
+	implementation("org.springframework.boot:spring-boot-starter:2.4.6")
+	implementation("org.springframework.boot:spring-boot-starter-data-redis:2.4.6")
 
 	implementation("com.github.ben-manes.caffeine:caffeine:2.9.1")
 
