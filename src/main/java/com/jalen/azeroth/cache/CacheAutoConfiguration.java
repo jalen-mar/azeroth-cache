@@ -48,7 +48,7 @@ public class CacheAutoConfiguration {
     @Resource
     private AzerothCacheProperties cacheProperties;
 
-    @Bean
+    @Bean("defaultRedisTemplate")
     @Primary
     @ConditionalOnMissingBean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {

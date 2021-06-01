@@ -59,7 +59,7 @@ public class AzerothCacheManagerFactory implements CacheManagerFactory {
             }
             break;
             case "redis": {
-                RedisTemplate redisTemplate = applicationContext.getBean(RedisTemplate.class);
+                RedisTemplate redisTemplate = applicationContext.getBean((String) params.get("name"), RedisTemplate.class);
                 cache = new RedisCache(name, topic, redisTemplate);
                 if (params.get("chain") != null) {
                     cache = new ChainCache(cache, manager.getCache((String) params.get("chain"), (String) params.get("topic")));
