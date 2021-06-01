@@ -22,7 +22,6 @@ public class RedisCache extends AbstractCache {
 
     @Override
     protected Object lookup(Object key) {
-        System.out.println("redis获取key:" + key);
         return redisTemplate.opsForValue().get(getKey(key));
     }
 
@@ -38,7 +37,6 @@ public class RedisCache extends AbstractCache {
 
     @Override
     public void put(Object key, Object value) {
-        System.out.println("redis修改key:" + key);
         redisTemplate.opsForValue().set(getKey(key), toStoreValue(value));
         notify(new CacheMessage(key, value, topic));
     }

@@ -14,12 +14,12 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter:2.4.6")
-	implementation("org.springframework.boot:spring-boot-starter-data-redis:2.4.6")
+	compile("org.springframework.boot:spring-boot-starter-data-redis:2.4.6")
 
-	implementation("com.github.ben-manes.caffeine:caffeine:2.9.1")
+	compile("com.github.ben-manes.caffeine:caffeine:2.9.1")
 
 	implementation("com.fasterxml.jackson.core:jackson-annotations:2.11.4")
 	implementation("com.fasterxml.jackson.core:jackson-databind:2.11.4")
 
-	implementation("org.apache.commons:commons-pool2:2.9.0")
+	compile("org.apache.commons:commons-pool2:2.9.0")
 }
